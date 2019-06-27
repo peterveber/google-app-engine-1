@@ -1,6 +1,6 @@
 runtime: custom
 env: flex
 readiness_check:
-  app_start_timeout_sec: 600
+  app_start_timeout_sec: 1800
 resources:
   memory_gb: 4
