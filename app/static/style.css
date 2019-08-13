@@ -36,14 +36,14 @@ body {
 .result-label {
     position: absolute;
     z-index: 2;
-    top: 20px;
-    left: 20px;
+    bottom: 0px;
+    left: 0px;
     font-size: 20;
-    background: white;
+    background: #c3c3c3;
     height: 100px! important;
-    width: 100px! important;
+    width: 100%! important;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
-    border: solid 3px white;
+    border: solid 3px #848484;
 }
 
 button.choose-file-button {
@@ -99,7 +99,7 @@ html, body{
     text-align: center;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
     position: fixed;
-    bottom: 30px;
+    bottom: 120px;
     left: calc(50% - 100px);
 }
 
