@@ -55,10 +55,10 @@ async def analyze(request):
     losses = losses.replace('\n        ','').replace('tensor','').replace('(','').replace(')','').replace('[','').replace(']','')
     mylist = [float(x) for x in losses.split(',')]
     predictions = sorted(zip(classes, mylist), key=lambda p: p[1], reverse=True)
-    st = predictions[0]
-    nd = predictions[1]
-    rd = predictions[2]
-    resultText = st + " " + nd + " " + rd
+    st = str(predictions[0])
+    nd = str(predictions[1])
+    rd = str(predictions[2])
+    resultText = str(st + " " + nd + " " + rd)
     return JSONResponse({'result': str(resultText)})
     #return JSONResponse({'result': str(learn.predict(img)[0])})
     #_,_,losses = learn.predict(img)[0]
