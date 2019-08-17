@@ -54,7 +54,7 @@ async def analyze(request):
     losses = str(learn.predict(img)[2])
     losses = losses.replace('\n        ','').replace('tensor','').replace('(','').replace(')','').replace('[','').replace(']','')
     mylist = [float(x) for x in losses.split(',')]
-    predictions = sorted(zip(dataClasses, mylist), key=lambda p: p[1], reverse=True)
+    predictions = sorted(zip(classes, mylist), key=lambda p: p[1], reverse=True)
     st = predictions[0]
     nd = predictions[1]
     rd = predictions[2]
