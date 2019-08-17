@@ -59,7 +59,7 @@ async def analyze(request):
     nd = predictions[1]
     rd = predictions[2]
     resultText = st + " " + nd + " " + rd
-    return JSONResponse({'result': resultText})
+    return JSONResponse({'result': str(resultText)})
     #return JSONResponse({'result': str(learn.predict(img)[0])})
     #_,_,losses = learn.predict(img)[0]
     #predictions = sorted(zip(classes, map(float, losses)), key=lambda p: p[1], reverse=True)
