@@ -8,6 +8,12 @@ from io import BytesIO
 from fastai import *
 from fastai.vision import *
 
+try:
+  import googleclouddebugger
+  googleclouddebugger.enable()
+except ImportError:
+  pass
+
 #model_file_url = 'https://www.dropbox.com/s/q0nuw0gvjghpbdg/stage-2.pth?raw=1'
 #model_file_name = 'model'
 #classes = ['black', 'grizzly', 'teddys']
@@ -51,16 +57,16 @@ async def analyze(request):
     data = await request.form()
     img_bytes = await (data['file'].read())
     img = open_image(BytesIO(img_bytes))
-    losses = str(trained_model.predict(img)[2])
-    losses = losses.replace('\n        ','').replace('tensor','').replace('(','').replace(')','').replace('[','').replace(']','')
-    mylist = [float(x) for x in losses.split(',')]
-    predictions = sorted(zip(dataClasses, mylist), key=lambda p: p[1], reverse=True)
-    st = predictions[0]
-    nd = predictions[1]
-    rd = predictions[2]
-    resultText = st + " " + nd + " " + rd
-    return JSONResponse({'result': resultText})
-    #return JSONResponse({'result': str(learn.predict(img)[0])})
+    #losses = str(trained_model.predict(img)[2])
+    #losses = losses.replace('\n        ','').replace('tensor','').replace('(','').replace(')','').replace('[','').replace(']','')
+    #mylist = [float(x) for x in losses.split(',')]
+    #predictions = sorted(zip(dataClasses, mylist), key=lambda p: p[1], reverse=True)
+    #st = predictions[0]
+    #nd = predictions[1]
+    #rd = predictions[2]
+    #resultText = st + " " + nd + " " + rd
+    #return JSONResponse({'result': resultText})
+    return JSONResponse({'result': str(learn.predict(img)[0])})
     #_,_,losses = learn.predict(img)[0]
     #predictions = sorted(zip(classes, map(float, losses)), key=lambda p: p[1], reverse=True)
     #st = str([i for i,j in predictions[0:1]]) + " - " + str([j for i,j in predictions[0:1]])
