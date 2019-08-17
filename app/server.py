@@ -51,7 +51,7 @@ async def analyze(request):
     data = await request.form()
     img_bytes = await (data['file'].read())
     img = open_image(BytesIO(img_bytes))
-    losses = str(trained_model.predict(img)[2])
+    losses = str(learn.predict(img)[2])
     losses = losses.replace('\n        ','').replace('tensor','').replace('(','').replace(')','').replace('[','').replace(']','')
     mylist = [float(x) for x in losses.split(',')]
     predictions = sorted(zip(dataClasses, mylist), key=lambda p: p[1], reverse=True)
