@@ -58,7 +58,7 @@ async def analyze(request):
     st = str(predictions[0])
     nd = str(predictions[1])
     rd = str(predictions[2])
-    resultText = str(st + " " + nd + " " + rd)
+    resultText = str("1st:"st + "  2nd:" + nd + " 3rd:" + rd).replace('(','').replace(')','').replace(',','-')
     return JSONResponse({'result': str(resultText)})
     #return JSONResponse({'result': str(learn.predict(img)[0])})
     #_,_,losses = learn.predict(img)[0]
