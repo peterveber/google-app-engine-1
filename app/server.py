@@ -43,6 +43,11 @@ loop.close()
 
 @app.route('/')
 def index(request):
+    try:
+        import googleclouddebugger
+        googleclouddebugger.enable()
+    except ImportError:
+        pass
     html = path/'view'/'index.html'
     return HTMLResponse(html.open().read())
 
