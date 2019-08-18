@@ -12,8 +12,8 @@ from fastai.vision import *
 #model_file_name = 'model'
 #classes = ['black', 'grizzly', 'teddys']
 
-model_file_url = 'https://www.dropbox.com/s/ek8wsfgoq5s3kap/stage-5.pth?raw=1'
-model_file_name = 'model4'
+model_file_url = 'https://www.dropbox.com/s/c01c90naswrqdem/stage-7.pth?raw=1'
+model_file_name = 'model5'
 classes = ['9326871', '9332898', '9336923', '9338446', '9338454', '9338462', '9338489', '9338497', '9338519', '9338527', '9338535', '9338543', '9414649', '9416994', 'admars', 'ahodki', 'ajflem', 'ajones', 'ajsega', 'akatsi', 'ambarw', 'anpage', 'asamma', 'asewil', 'asheal', 'astefa', 'bplyce', 'cchris', 'ccjame', 'cferdo', 'cgboyc', 'cjcarr', 'cjdenn', 'cjsake', 'cmkirk', 'csanch', 'cshubb', 'cwchoi', 'dagran', 'dakram', 'dcbowe', 'dioann', 'djbirc', 'djhugh', 'djmart', 'dmwest', 'drbost', 'ekavaz', 'elduns', 'gdhatc', 'ggeorg', 'ggrego', 'gjhero', 'gjnorm', 'gmwate', 'gpapaz', 'gpsmit', 'gsreas', 'irdrew', 'jabins', 'jagrif', 'jcarte', 'jdbenm', 'jgloma', 'jlemon', 'jmedin', 'jrtobi', 'kaatki', 'kaknig', 'kdjone', 'khchan', 'khughe', 'kjwith', 'klclar', 'ksunth', 'lejnno', 'lfso', 'maasht', 'mberdo', 'mbutle', 'mdpove', 'mefait', 'mhwill', 'miaduc', 'mjhans', 'mpetti', 'muthay', 'nahaig', 'namull', 'ndbank', 'ndhagu', 'nhrams', 'njmoor', 'npbour', 'npmitc', 'nrclar', 'nrrbar', 'nwilli', 'ohpark', 'pacole', 'phughe', 'pmives', 'pshurr', 'pspliu', 'ptnich', 'rarobi', 'rgharr', 'rgspru', 'rjlabr', 'rlocke', 'rmcoll', 'rmpugh', 'rnpwil', 'rrowle', 'rsanti', 'saduah', 'saedwa', 'sbains', 'sidick', 'sjbeck', 'skumar', 'slbirc', 'smrobb', 'spletc', 'svkriz', 'swewin', 'swsmit', 'vpsavo', 'vstros', 'whussa', 'wjalbe', 'yfhsie']
 path = Path(__file__).parent
 
